@@ -21,26 +21,25 @@
 
 
     <Button
-            android:id="@+id/content"
+            android:id="@+id/word1"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="30dp"
             android:background="#FFFFFF"
             android:text="word1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/result"
+            app:layout_constraintBottom_toTopOf="@id/word2"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-    />
+            app:layout_constraintTop_toBottomOf="@id/top_list"/>
 
     <Button
-            android:id="@+id/result"
+            android:id="@+id/word2"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="#FFFFFF"
             android:text="word2"
             app:layout_constraintBottom_toTopOf="@id/constraint"
-            app:layout_constraintTop_toBottomOf="@id/content" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/word1" app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
@@ -54,14 +53,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_edit"
                 tools:layout_editor_absoluteY="24dp"
-                android:id="@+id/imageButton" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/imageButton2"/>
+                android:id="@+id/write" app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/delete"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_delete"
                 tools:layout_editor_absoluteY="23dp"
-                android:id="@+id/imageButton2"
-                app:layout_constraintLeft_toRightOf="@id/imageButton" app:layout_constraintRight_toRightOf="parent"/>
+                android:id="@+id/delete"
+                app:layout_constraintLeft_toRightOf="@id/write" app:layout_constraintRight_toRightOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
 

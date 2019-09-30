@@ -27,12 +27,12 @@
             android:background="#FFFFFF"
             android:text="content"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/result"
+            app:layout_constraintBottom_toTopOf="@id/deletee"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
     />
 
     <Button
-            android:id="@+id/result"
+            android:id="@+id/deletee"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
