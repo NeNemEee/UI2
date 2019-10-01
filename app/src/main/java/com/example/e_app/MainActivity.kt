@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener{
             val intent=Intent(this,StudyActivity::class.java)
-            startActivityForResult(intent,1)
-            //startActivity(intent)
+            startActivity(intent)
         }
     }
 }
