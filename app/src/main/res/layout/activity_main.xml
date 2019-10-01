@@ -48,7 +48,7 @@
             android:layout_marginTop="50dp"
             android:background="@android:color/holo_green_dark"
             android:text="List3"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/list2"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
     />
@@ -64,27 +64,27 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_btn_speak_now"
-                tools:layout_editor_absoluteY="24dp"
                 android:id="@+id/imageButton" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/imageButton2"/>
+                app:layout_constraintRight_toLeftOf="@id/imageButton2" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_search"
-                tools:layout_editor_absoluteY="23dp"
                 android:id="@+id/imageButton2" app:layout_constraintRight_toLeftOf="@id/imageButton3"
-                app:layout_constraintLeft_toRightOf="@id/imageButton"/>
+                app:layout_constraintLeft_toRightOf="@id/imageButton" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
-                tools:layout_editor_absoluteY="22dp"
                 android:id="@+id/imageButton3" app:layout_constraintRight_toLeftOf="@id/imageButton4"
-                app:layout_constraintLeft_toRightOf="@id/imageButton2"/>
+                app:layout_constraintLeft_toRightOf="@id/imageButton2" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/checkbox_on_background"
-                tools:layout_editor_absoluteY="22dp"
                 android:id="@+id/imageButton4" app:layout_constraintLeft_toRightOf="@id/imageButton3"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
 
 
