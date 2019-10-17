@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0e680"
+        tools:context=".MainActivity" android:id="@+id/Search">
+
+    <TextView
+            android:id="@+id/txt_wordsearch"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:text="@android:string/search_go"
+            android:textColor="@android:color/black"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+            android:id="@+id/statusprogress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/txt_mean_detail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <EditText
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@id/btn_search"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_wordsearch" />
+
+    <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@id/statusprogress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_wordsearch" />
+
+
+    <TextView
+            android:id="@+id/txt_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단어 : "
+            app:layout_constraintBottom_toTopOf="@id/txt_mean"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_word_detail"
+            app:layout_constraintTop_toBottomOf="@id/statusprogress" />
+
+    <TextView
+            android:id="@+id/txt_word_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단어"
+            app:layout_constraintBaseline_toBaselineOf="@id/txt_word"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/txt_word"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+            android:id="@+id/txt_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뜻 : "
+            app:layout_constraintBottom_toTopOf="@id/btn_add_word"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_mean_detail"
+            app:layout_constraintTop_toBottomOf="@id/txt_word" />
+
+    <TextView
+            android:id="@+id/txt_mean_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="뜻"
+            app:layout_constraintBaseline_toBaselineOf="@id/txt_mean"
+            app:layout_constraintBottom_toTopOf="@id/btn_add_word"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toRightOf="@id/txt_mean"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+            android:id="@+id/btn_add_word"
+            android:layout_width="103dp"
+            android:layout_height="54dp"
+            android:text="단어장 추가"
+            app:layout_constraintBottom_toTopOf="@id/constraint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_mean_detail" />
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/constraint">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_btn_speak_now"
+                android:id="@+id/btn_speech" app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_word_search" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_search"
+                android:id="@+id/btn_word_search" app:layout_constraintRight_toLeftOf="@id/btn_word_note"
+                app:layout_constraintLeft_toRightOf="@id/btn_speech" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
+                android:id="@+id/btn_word_note" app:layout_constraintRight_toLeftOf="@id/btn_quiz"
+                app:layout_constraintLeft_toRightOf="@id/btn_word_search" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/checkbox_on_background"
+                android:id="@+id/btn_quiz" app:layout_constraintLeft_toRightOf="@id/btn_word_note"
+                app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

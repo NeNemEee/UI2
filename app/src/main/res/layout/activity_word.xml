@@ -1,67 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/word"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#f0e680"
-        tools:context=".MainActivity" android:id="@+id/word">
+        tools:context=".MainActivity">
 
     <TextView
+            android:id="@+id/txt_wordsearch"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@android:color/holo_orange_light"
-            android:text="Word List"
-            android:textColor="#182D00"
             android:gravity="center"
+            android:text="Word List"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#182D00"
+            app:autoSizeTextType="uniform"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/top_list" app:autoSizeTextType="uniform"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
-            android:id="@+id/word1"
-            android:layout_width="380dp"
+    <ListView
+            android:id="@+id/listview_word"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/write"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_wordsearch">
+
+    </ListView>
+
+    <ImageButton
+            android:id="@+id/write"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="#FFFFFF"
-            android:text="word1"
-            app:layout_constraintBottom_toTopOf="@id/word2"
-            app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/top_list"/>
-
-    <Button
-            android:id="@+id/word2"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#FFFFFF"
-            android:text="word2"
             app:layout_constraintBottom_toTopOf="@id/constraint"
-            app:layout_constraintTop_toBottomOf="@id/word1" app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/delete"
+            app:layout_constraintTop_toBottomOf="@id/listview_word"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/constraint"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/write"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listview_word"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:background="#FFFFFF"
-            app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/constraint">
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_edit"
-                android:id="@+id/write" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/delete" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_delete"
-                android:id="@+id/delete"
-                app:layout_constraintLeft_toRightOf="@id/write" app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
+        <ImageButton
+                android:id="@+id/btn_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_word_search"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+        <ImageButton
+                android:id="@+id/btn_word_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_speech"
+                app:layout_constraintRight_toLeftOf="@id/btn_word_note"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+        <ImageButton
+                android:id="@+id/btn_word_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_word_search"
+                app:layout_constraintRight_toLeftOf="@id/btn_quiz"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+                android:id="@+id/btn_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_word_note"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
     </android.support.constraint.ConstraintLayout>
 
 

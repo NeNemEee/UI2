@@ -16,7 +16,7 @@
             android:textColor="#182D00"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/top_list" app:autoSizeTextType="uniform"/>
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/txt_wordsearch" app:autoSizeTextType="uniform"/>
 
 
     <Button
@@ -40,14 +40,14 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_media_rew"
-                android:id="@+id/imageButton" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/imageButton2" app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/btn_prev" app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btb_next" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_media_ff"
-                android:id="@+id/imageButton2"
-                app:layout_constraintLeft_toRightOf="@id/imageButton" app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/btb_next"
+                app:layout_constraintLeft_toRightOf="@id/btn_prev" app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>

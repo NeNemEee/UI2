@@ -16,43 +16,46 @@
             android:textColor="@android:color/black"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/top_list" app:autoSizeTextType="uniform"/>
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/txt_wordsearch" app:autoSizeTextType="uniform"/>
 
 
     <Button
-            android:id="@+id/list1"
+            android:id="@+id/btn_list1"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:background="@android:color/holo_green_dark"
             android:text="List1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/list2"
+            app:layout_constraintBottom_toTopOf="@id/btn_list2"
             app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
     />
 
     <Button
-            android:id="@+id/list2"
+            android:id="@+id/btn_list2"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@android:color/holo_green_light"
             android:text="List2"
-            app:layout_constraintBottom_toTopOf="@id/list3"
-            app:layout_constraintTop_toBottomOf="@id/list1" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/brn_list3"
+            app:layout_constraintTop_toBottomOf="@id/btn_list1" app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
+
+
     <Button
-            android:id="@+id/list3"
+            android:id="@+id/brn_list3"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
             android:background="@android:color/holo_green_dark"
             android:text="List3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/list2"
-            app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-    />
-
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_list2" />
 
     <android.support.constraint.ConstraintLayout
             android:layout_width="0dp"
@@ -64,25 +67,25 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_btn_speak_now"
-                android:id="@+id/imageButton" app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/imageButton2" app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btn_speech" app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_word_search" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_search"
-                android:id="@+id/imageButton2" app:layout_constraintRight_toLeftOf="@id/imageButton3"
-                app:layout_constraintLeft_toRightOf="@id/imageButton" app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btn_word_search" app:layout_constraintRight_toLeftOf="@id/btn_word_note"
+                app:layout_constraintLeft_toRightOf="@id/btn_speech" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
-                android:id="@+id/imageButton3" app:layout_constraintRight_toLeftOf="@id/imageButton4"
-                app:layout_constraintLeft_toRightOf="@id/imageButton2" app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btn_word_note" app:layout_constraintRight_toLeftOf="@id/btn_quiz"
+                app:layout_constraintLeft_toRightOf="@id/btn_word_search" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@android:drawable/checkbox_on_background"
-                android:id="@+id/imageButton4" app:layout_constraintLeft_toRightOf="@id/imageButton3"
+                android:id="@+id/btn_quiz" app:layout_constraintLeft_toRightOf="@id/btn_word_note"
                 app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
